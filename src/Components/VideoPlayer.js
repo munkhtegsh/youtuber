@@ -1,29 +1,28 @@
-import React, {Component} from 'react';
+import React from 'react';
 
-class VideoPlayer extends Component {
-    
-    render() {
-        if (!this.props.list) {
-            <div> Loading... </div>
-        }
-        
-        const video = this.props.list;
-        const URL = video.snippet;
-        console.log(URL)
-
-        return (
-            <div className="video-detail col-md-8">
-                <div className="embed-responsive embed-responsive-16by9">
-                    <iframe src={URL} frameborder="0" className="embed-responsive-item"></iframe>
-                </div>
-
-                <div className="details">
-                    <div></div>
-                    <div></div>
-                </div>
-            </div>
-        )
+const VideoPlayer = (props) => {
+    // const video = props.list;
+    const video = props.list;
+    if(!video) {
+        return <div>loading...</div>
     }
+
+    const videoId = video.id.videoId;
+    const url = `https://www.youtube.com/embed/${videoId}`;
+
+    console.log(video.snippet)
+    return (
+        <div className="video-detail col-md-8">
+            <div className="embed-responsive embed-responsive-16by9">
+                <iframe className="embed-responsive-item" src={url} title={video.snippet.title}></iframe>
+            </div>
+
+            <div className="details">
+                <div>{video.snippet.title}</div>
+                <div>{video.snippet.description}</div>
+            </div>
+        </div>
+    )
 }
 
 export default VideoPlayer;

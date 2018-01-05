@@ -14,12 +14,10 @@ class Search extends Component {
     render() {
 
         return (
-            <div>
+            <div className="search-bar">
                 <input type="text" placeholder="Search" 
                     onChange={e => this.setState({input: e.target.value})}
                 />
-
-
             </div>
         )
     }
