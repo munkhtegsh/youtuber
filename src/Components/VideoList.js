@@ -2,8 +2,8 @@ import React from 'react';
 import ListItem from './ListItem';
 
 const VideoList = (props) => {
-    const item = props.list.map((video, i) => {
-        return <ListItem video={video} key={i} />
+    const item = props.list.map((e, i) => {
+        return <ListItem video={e} key={i} />
     });
 
     return (
