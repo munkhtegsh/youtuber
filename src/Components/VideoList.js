@@ -8,11 +8,9 @@ const VideoList = (props) => {
     });
 
     return (
-        <div>
             <ul className="col-md-4 list-group">
                 {item}
             </ul>
-        </div>
     )
 }
 

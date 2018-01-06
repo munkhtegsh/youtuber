@@ -6,14 +6,13 @@ const ListItem = (props) => {
     const URL = video.snippet.thumbnails.default.url;
 
     return (
-        <li className="list-group-item"
-            onClick={() => onSelected(video)} >
-            <div className="media-body">
-                <div media-heading>{video.snippet.title}</div>
-            </div>
+        <li onClick={() => onSelected(video)} className="list-group-item"> 
             <div className="video-list media">
                 <div className="media-left">
                     <img className="media-object" alt="img" src={URL} />
+                </div>
+                <div className="media-body">
+                    <div media-heading>{video.snippet.title}</div>
                 </div>
             </div>
         </li>
