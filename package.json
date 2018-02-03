@@ -13,6 +13,7 @@
     "youtube-api-search": "0.0.5"
   },
   "scripts": {
+    "homepage": "https://myusername.github.io",
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test --env=jsdom",
