@@ -2,9 +2,11 @@
   "name": "youtuber",
   "version": "0.1.0",
   "private": true,
+  "homepage": "https://munkhtegsh.github.io/youtuber",
   "dependencies": {
     "axios": "^0.17.1",
     "bootstrap": "^3.3.7",
+    "gh-pages": "^1.1.0",
     "lodash": "^4.17.4",
     "react": "^16.2.0",
     "react-bootstrap": "^0.32.0",
@@ -13,7 +15,8 @@
     "youtube-api-search": "0.0.5"
   },
   "scripts": {
-    "homepage": "https://myusername.github.io",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build",
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test --env=jsdom",
